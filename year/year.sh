@@ -4,43 +4,41 @@ source config.sh
 
 YEAR=$1
 
-if [ ${YEAR} -ne 2021 ]; then
-   echo "Invalid year"
-   exit 1
-fi
+if [ ${YEAR} -eq 2021 ]; then
+  declare -a TEAMS=( chaos ceres charon )
 
-declare -a TEAMS=( chaos ceres charon )
+  clear
 
-clear
+  echo "_______________   ________  ____"
+  echo "\_____  \   _  \  \_____  \/_   |"
+  echo " /  ____/  /_\  \  /  ____/ |   |"
+  echo "/       \  \_/   \/       \ |   |"
+  echo "\_______ \_____  /\_______ \|___|"
+  echo "        \/     \/         \/"
 
-echo "_______________   ________  ____"
-echo "\_____  \   _  \  \_____  \/_   |"
-echo " /  ____/  /_\  \  /  ____/ |   |"
-echo "/       \  \_/   \/       \ |   |"
-echo "\_______ \_____  /\_______ \|___|"
-echo "        \/     \/         \/"
+  fluff 10
 
-fluff 10
+  echo -e "${GREEN}${YEAR}${NC} was a great year! The teams in Örebro performed ${BLINK}${YELLOW}WONDERS${NC}"
 
-echo -e "${GREEN}${YEAR}${NC} was a great year! The teams in Örebro performed ${BLINK}${YELLOW}WONDERS${NC}"
+  fluff 3
 
-fluff 3
+  echo -e "Let's have a look at what has been done during the year..."
 
-echo -e "Let's have a look at what has been done during the year..."
+  for t in "${TEAMS[@]}"
+  do
+    fluff 10
+    clear
+    ./team.sh ${YEAR} ${t}
+  done
 
-for t in "${TEAMS[@]}"
-do
   fluff 10
   clear
-  ./team.sh ${YEAR} ${t}
-done
+  fluff 10
 
-fluff 10
-clear
-fluff 10
+  NEXT_YEAR=$((YEAR + 1))
 
-NEXT_YEAR=$((YEAR + 1))
+  echo -e "Keep up the good work! ${BLINK}${YELLOW}${NEXT_YEAR} will be amazing!${NC}"
 
-echo -e "Keep up the good work! ${BLINK}${YELLOW}${NEXT_YEAR} will be amazing!${NC}"
+  fluff 10
+fi
 
-fluff 10

@@ -125,7 +125,7 @@ if [ $TEAM == "chaos" ]; then
   ./gource-multi.sh ${YEAR} ${BACKOFFICE_AUTH[repo]} ${BACKOFFICE_AUTH_PROXY[repo]} ${BACKOFFICE_SERVICE[repo]} ${BACKOFFICE_SCRIPTS[repo]} ${BACKOFFICE_UI_COMPONENTS[repo]} ${MERCHANT_PORTAL[repo]} ${PAYPAL[repo]} ${ESLINT_CONFIG_TRUSTLY_REACT[repo]} ${CREATE_BACKOFFICE_COMPONENT[repo]} ${PHOENIX_BACKOFFICE[repo]} ${COMMAND_CENTER_VIEWS[repo]} ${BACKOFFICE_OAUTH_SHARED_LIB[repo]}
 fi
 
-declare -a CERES_MEMBERS=( "Ola Hellgren" "Jonatan Berg" "Pontus Eliason" "Anders Israelsso" "Niclas Ivarsson" )
+declare -a CERES_MEMBERS=( "Ola Hellgren" "Jonatan Berg" "Pontus Eliason" "Anders Israelsson" "Niclas Ivarsson" )
 declare -A GLUEPAY_ROUTER=( [repo]=gluepay-router [prod]=0 [service]=gluepay-router )
 declare -A PRODUCT_PLATFORM_ADAPTER=( [repo]=product-platform-adapter [prod]=0 [service]=product-platform-adapter )
 declare -A NOTIFICATION_SERVICE=( [repo]=notification-service-1.0 [prod]=1 [service]=notification-service )
